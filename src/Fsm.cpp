@@ -26,10 +26,10 @@ Fsm::Fsm(State* initial_state) :
   m_current_state(initial_state),
   m_transitions(NULL),
   m_num_transitions(0),
+  m_on_transition(NULL),
   m_num_timed_transitions(0),
-  m_dot_definition(create_dot_inital_state(initial_state->name)),
   m_initialized(false),
-  m_on_transition(NULL)
+  m_dot_definition(create_dot_inital_state(initial_state->name))
   {}
 
 Fsm::~Fsm() {
